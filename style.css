@@ -1,0 +1,554 @@
+@font-face {
+    font-family: 'MPonderosa';
+    src: url('./MPonderosa.ttf');
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1E1E1E;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-between;
+}
+/*aca modifico el scrollbar*/
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background: #FFDE59;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-track{
+    background: #474747;
+    max-width: 20px;
+}
+/*aca modifico el header*/
+.navegacion{
+    display: flex;
+    justify-content: flex-end;
+}
+.vacio h2{
+    font-size: 50px;
+    font-family: 'MPonderosa', sans-serif;
+    color: #FFDE59;
+}
+.vacio{
+    margin-right: 150px;
+    margin-top: 8px;
+}
+#arriba{
+    padding-top: 40px;
+}
+header nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 25px;
+    font-weight:100;
+    color: white;
+}
+nav ul li a:hover{
+    color: #FFDE59;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+/*aca modifico como se veria en celular el header*/
+@media (max-width: 700px){
+    .vacio{
+        width: 100%;
+        height: 80px;
+        margin: 0;
+        background: #1E1E1E;
+        position: fixed;
+    }
+    .vacio h2{
+        font-size: 50px;
+        position: absolute;
+        top: 10%;
+        left: 40%;
+        font-family: 'MPonderosa', sans-serif;
+        color: #FFDE59;
+    }
+    #arriba{
+        padding-top: 80px;
+    }
+}
+/*aca modifico como se veria el header en tablet*/
+@media (max-width: 900px){
+    .vacio{
+        width: 100%;
+        height: 80px;
+        margin: 0;
+        background: #1E1E1E;
+        position: fixed;
+    }
+    .vacio h2{
+        font-size: 50px;
+        position: absolute;
+        top: 10%;
+        left: 40%;
+        font-family: 'MPonderosa', sans-serif;
+        color: #FFDE59;
+    }
+    #arriba{
+        padding-top: 80px;
+    }
+    .checkbtn{
+        display: block;
+        float: left;
+        position: fixed;
+        z-index: 20;
+    }
+    header{
+        z-index: 19;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #1e1e1e;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+    }
+    nav ul li a{
+        font-size: 30px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+/*aca configuro como se ven las letras animadas*/
+.main-one span{
+    font-weight: 600;
+    font-size: 60px;
+    color: #FFDE59;
+}
+.letras-animadas{
+    height: 150px;
+}
+@media (max-width: 700px){
+    .letras-animadas{
+        height: 10px;
+    }
+}
+/*otros elementos*/
+.main-one p{
+    font-size: 20px;
+    padding: 10px 0;
+}
+.main-one h1{
+    font-size: 80px;
+}
+.main .main-one{
+    width: 45%;
+    padding: 40px 30px;
+    padding-left: 150px;
+    padding-top: 40px;
+}
+/*aca va como se veria en celular seccion contratame*/
+@media (max-width: 700px){
+    .main .main-one{
+        width: 45%;
+        padding: 40px 30px;
+        padding-left: 150px;
+        padding-top: 120px;
+    } 
+}
+/*aca como se veria en tablet la seccion contratame*/
+@media (max-width: 900px){
+    .main .main-one{
+        width: 80%;
+    }
+}
+/*aca configuro como se ve el boton de "contratame"*/
+.main-one button{
+    background-color: #FFDE59;
+    outline: none;
+    border: none;
+    padding: 9px 35px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    box-shadow: 2px 2px 30px #0e0e0e79;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all ease-out 0.2s;
+}
+.main-one button:hover{
+    transform: scale(1.02);
+}
+.main-one button a{
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+/*aca va la seccion de proyectos*/
+.projects{
+    width: 100%;
+    padding-top: 20px;
+    display: grid;
+    padding-left: 150px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+.proyecto{
+    width: 80%;
+}
+.projects h1{
+    font-size: 50px;
+    line-height: 49px;
+    font-weight: 800;
+}
+.projects h1 span{
+    color: #FFDE59;
+}
+.projects p{
+    width: 100%;
+    font-size: 17px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+.projects .button{
+    background-color: #FFDE59;
+    padding: 9px 25px;
+    margin-top: 20px;
+    width: 200px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    border-radius: 50px;
+}
+.button a{
+    color: black;
+}
+.projects-div{
+    width:300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    height: 500px;
+    z-index: 10;
+    margin: 50px;
+    margin-left: 0;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.2s ease-out;
+}
+#contador{
+    display: none;
+}
+.div-1{
+    margin-top: 0;
+}
+.div-2{
+    bottom: 10px;
+    right: 1000px;
+}
+.div-3{
+    bottom: 10px;
+    right: 600px;
+}
+.projects-div h3{
+    font-size: 23px;
+    padding:5px 30px;
+    padding-top: 20px;
+    color: #FFDE59;
+    font-family: 'Roboto', sans-serif;
+}
+.projects-div p{
+    width: 80%;
+    text-align: left;
+}
+.projects-div input {
+    background-color: transparent;
+    outline: none;
+    font-size: 1em;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+    padding-top: 20px;
+    width: 80%;
+    display: block;
+    color: white;
+}
+.projects button{
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border: 1px solid #FFDE59;
+    padding: 7px 25px;
+    font-weight: 500;
+    font-size: 22px;
+    border-radius: 0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 50px;
+}
+.texto{
+    padding: 0px 30px;
+}
+button a {
+    text-decoration: none;
+    color: white;
+}
+#resultado{
+    padding: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+/*aca como se veria la seccion de proyectos en celular*/
+@media (max-width: 700px){
+    .projects{
+        padding: 20px 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    .projects p{
+        font-size: 20px;
+        margin-top: 40px;
+        padding: 0px;
+    }
+    .proyecto{
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+/*tablet seccion proyectos*/
+@media (max-width: 900px){
+    .projects{
+        padding-left: 50px;
+    }
+}
+.checkbtn{
+    line-height: 80px;
+    margin-right: 20px;
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
+    color: #FFDE59;
+}
+#check{
+    display: none;
+}
+/*pantalla 400px*/
+@media(max-width: 400px){
+    .projects h1{
+        font-size: 40px;
+    }
+    .projects {
+        padding-left: 40px;
+    }
+    .btns button{
+        margin: 10px 10px;
+        margin-left: 0;
+        padding: 5px 10px;
+    }
+    .btns button a {
+        font-size: 13px;
+    }
+}
+/*como se veria en celular seccion header*/
+@media (max-width: 700px){
+    .checkbtn{
+        display: block;
+        float: left;
+        position: fixed;
+        z-index: 20;
+    }
+    header{
+        z-index: 19;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #1e1e1e;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+    }
+    nav ul li a{
+        font-size: 30px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .main .main-one{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 20px 40px;
+    }
+    .main-one h1{
+        font-size: 30px;
+    }
+    .main-one span{
+        font-weight: 600;
+        font-size: 30px;
+        color: #FFDE59;
+    }
+    .main-one p{
+        width: 100%;
+        font-size: 20px;
+        margin-top: 40px;
+        padding: 0px;
+    }
+    .main-one button{
+        background-color: #FFDE59;
+        outline: none;
+        border: none;
+        padding: 0px;
+        margin-top: 20px;
+        cursor: pointer;
+        font-size: 20px;
+        height: 50px;
+        width: 180px;
+        box-shadow: 2px 2px 30px #0e0e0e79;
+        font-weight: 600;
+        transition: all ease-out 0.2s;
+    }
+    .contact h1{
+        font-size: 30px;
+    }
+    .box div i{
+        position: absolute;
+        font-size: 20px;
+        color: black;
+        top: 17px;
+        left: 20px;
+    }
+    .contact .box textarea{
+        width: 80%;
+    }
+    body{
+        overflow-x: hidden;
+    }
+}
+/*seccion sobre mi*/
+.about{
+    width: 100%;
+    height: 400px;
+    padding-left: 150px;
+    justify-content: center;
+}
+.about-one{
+    width: 70%;
+}
+.about-one h1{
+    font-size: 50px;
+}
+.about-one p{
+    padding: 10px 0;
+    width: 95%;
+    text-align: justify;
+    font-size: 20px;
+}
+.about-one span{
+    font-size: 40px;
+    color: #FFDE59;
+    font-weight: 800;
+}
+.btns{
+    margin: 15px 0;
+}
+.btns button{
+    background-color: #FFDE59;
+    padding: 8px 17px;
+    font-size:18px;
+    margin: 10px;
+    margin-left: 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all ease-out 0.2s;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
+.btns button a{
+    color: black;
+}
+.btns button:hover{
+    transform: scale(1.02);
+}
+/*como se veria en celular seccion sobre mi*/
+@media (max-width: 700px){
+    .about{
+        padding: 50px;
+    }
+    .about-one{
+        width: 100%;
+        padding: 0;
+    }
+    .about-one h1{
+        font-size: 30px;
+    }
+    .about-one span{
+        font-size: 25px;
+    }
+    .btns{
+        margin-bottom: 40px;
+    }
+}
+/*como se veria en tablet seccion sobre mi*/
+@media (max-width: 900px){
+    .about{
+        padding-left: 50px;
+    }
+}
+/*aca modifico el footer*/
+.pie_de_pagina{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(#FFDE59 , #ddb100);
+    color: black;
+}
+footer .social i{
+    font-size: 25px;
+    margin: 0 3px;
+    cursor: pointer;
+}
+.social i:hover{
+    color: palevioletred;
+}
+.social a{
+    text-decoration: none;
+    color: black;
+}
+/*como se ve en celular footer*/
+@media (max-width: 700px){
+    .pie_de_pagina{
+        margin-top: 40px;
+    }
+}
