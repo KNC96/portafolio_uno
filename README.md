@@ -1,2 +1,2 @@
-# portafolio1.1
+# portafolio_resposive
 Es el portafolio que hice hace un tiempo pero lo mejore
