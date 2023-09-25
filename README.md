@@ -1,2 +1,2 @@
 # Portafolio_resposive
-Es el portafolio que hice hace un tiempo pero lo mejore
+portafolio en color negro y amarillo, utiliza la api de binance y una para saber el clima.
