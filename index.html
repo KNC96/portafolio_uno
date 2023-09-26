@@ -1,69 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--con esto añado los iconos de redes sociales-->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
     <!--aqui añado la hoja de estilos-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!--aqui añado el icono de menu-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="KNC.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="KNC.png" type="image/x-icon" />
     <title>Kevin Castro | Portafolio</title>
-</head>
-<body>
-     <header class="menu">
-        <nav class="navegacion">
-           <div class="vacio"><h2>KNC</h2></div>
-           <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-             <i class="fa-solid fa-bars"></i>
-            </label>
-            <ul>
-              <li><a href="#about">Sobre Mí</a></li>
-              <li><a href="https://github.com/KNC96" target="_blank">GitHub</a></li>
-              <li><a href="#project">Mis habilidades</a></li>
-              <li><a href="index_ingles.html">Change language</a></li>
-            </ul>
-        </nav>
-     </header>
-     <div class="main flex" id="arriba">
+  </head>
+  <body>
+    <!--seccion inicio-->
+    <section id="inicio" class="inicio">
+      <div class="contenido">
+        <header>
+          <div class="logo">
+            <i class="fa-brands fa-squarespace"></i>
+            <h1>Kevin Castro</h1>
+          </div>
+          <nav id="nav" class="responsive">
+            <a href="#inicio">Inicio</a>
+            <a href="#project">Habilidades</a>
+            <a href="#about">Sobre mi</a>
+            <a href="#contacto">Contactame</a>
+            <a href="index_ingles.html">Change Language</a>
+          </nav>
+          <div id="icono-nav" onclick="responsiveMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="redes">
+            <a
+              href="https://www.youtube.com/channel/UCx1w6vEbfo_yyU9kwDBBuMg"
+              target="_blank"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a href="https://instagram.com/practicandoprogramacion2022?igshid=MmU2YjMzNjRlOQ==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/KNC96" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+        </header>
+      </div>
+    </section>
+
+    <div class="main flex" id="arriba inicio">
       <div class="main-one">
-        <h1>¿Estas buscando </h1>
+        <h1>¿Estas buscando</h1>
         <div class="letras-animadas">
           <span class="auto"></span>
         </div>
         <p>
-          Puedo crear sitios web personalizables, adaptables a distintos dispositivos
-          como celulares y tablets.
-          Utilizo distintos frameworks como react, react native, ionic, django, y
-          me especializo en lenguajes de programacion como Javascript y Python.
+          Puedo crear sitios web personalizables, adaptables a distintos
+          dispositivos como celulares y tablets. Utilizo distintos frameworks
+          como react, react native, ionic, django, y me especializo en lenguajes
+          de programacion como Javascript y Python.
         </p>
-        <button><a href="https://linkedin.com/in/kevin-castro-b12357214" target="_blank">Contratame</a></button>
+        <button>
+          <a
+            href="https://linkedin.com/in/kevin-castro-b12357214"
+            target="_blank"
+            >Contratame</a
+          >
+        </button>
       </div>
-     </div>
-     <!--aqui va la seccion de proyectos-->
-     <section class="projects" id="project">
+    </div>
+    <!--aqui va la seccion de proyectos-->
+    <section class="projects" id="project">
       <div class="proyecto">
         <h1>Mis <br /><span>Habilidades</span></h1>
-      <p>
-        En esta seccion he puesto dos ejemplos de como consumir una API_REST, tambien he creado
-        un canal de youtube, todavia le estoy haciendo unas mejoras pero una breve visita
-        por mi canal no estaria mal.
-      </p>
-      <button class="button" id="descargar-cv"><a href="Kevin_castro_CV.pdf" download="Kevin_castro_CV">Descargar CV</a></button>
+        <p>
+          En esta seccion he puesto dos ejemplos de como consumir una API_REST,
+          tambien he creado un canal de youtube, todavia le estoy haciendo unas
+          mejoras pero una breve visita por mi canal no estaria mal.
+        </p>
+        <button class="button" id="descargar-cv">
+          <a href="Kevin_castro_CV.pdf" download="Kevin_castro_CV" target="_blank"
+            >Descargar CV</a
+          >
+        </button>
       </div>
       <div class="projects-div flex div-1">
         <h3>Se utilizar la API de Binance</h3>
         <p>
-          Al presionar el boton "ver precio" 
-          se mostrara el precio en tiempo real de la criptomoneda Bitcoin.
+          Al presionar el boton "ver precio" se mostrara el precio en tiempo
+          real de la criptomoneda Bitcoin.
         </p>
         <h2 class="texto"><span id="contador"></span></h2>
         <h2 class="texto"><span id="precio"></span></h2>
@@ -72,62 +105,94 @@
       <div class="projects-div flex div-2">
         <h3>App del tiempo</h3>
         <p>
-            Introduzca el nombre de su ciudad y presione el boton mostrar temperatura.
+          Introduzca el nombre de su ciudad y presione el boton mostrar
+          temperatura.
         </p>
-        <input type="text" placeholder="Ingrese el nombre de su ciudad" id="city" value="cordoba">
+        <input
+          type="text"
+          placeholder="Ingrese el nombre de su ciudad"
+          id="city"
+          value="cordoba"
+        />
         <div id="resultado"></div>
         <button id="search-btn">mostrar temperatura</button>
       </div>
       <div class="projects-div flex div-3">
         <h3>Proyecto canal de YouTube</h3>
         <p>
-            Al presionar el boton de abajo se abrira una pestaña para visitar mi canal de YouTube.
+          Al presionar el boton de abajo se abrira una pestaña para visitar mi
+          canal de YouTube.
         </p>
-        <button><a href="https://www.youtube.com/channel/UCx1w6vEbfo_yyU9kwDBBuMg" target="_blank">Visita mi canal</a></button>
+        <button>
+          <a
+            href="https://www.youtube.com/channel/UCx1w6vEbfo_yyU9kwDBBuMg"
+            target="_blank"
+            >Visita mi canal</a
+          >
+        </button>
       </div>
     </section>
     <br /><br />
     <!--seccion sobre mi-->
     <section class="about flex" id="about">
-        <div class="about-one">
-          <h1>Sobre mí</h1>
-          <span>Kevin Castro</span>
-          <p>
-            Siempre me ha interesado todo lo relacionado con la computacion
-            y la electronica, mas precisamente con la programacion. A lo largo
-            de los años he aprendido desde lo basico como por ejemplo saber utilizar word, excel y powerpoint,
-            editores de imagenes, video hasta 
-            la programacion de sitios webs, como optimizarlos para tener trafico organico, que se pueda
-            visualizar de forma correcta
-            en diversos dispositivos electronicos, todo con el proposito de que el sitio web sea lo mas
-            agradable y fluido posible al usuario final.
-          </p>
-          <div class="btns">
-            <button><a href="perfil_linkedin.pdf" download="perfil_linkedin">Descargar CV</a></button>
-            <button><a href="https://linkedin.com/in/kevin-castro-b12357214" target="_blank">Contactame</a></button>
-          </div>
+      <div class="about-one">
+        <h1>Sobre mí</h1>
+        <span>Kevin Castro</span>
+        <p>
+          Siempre me ha interesado todo lo relacionado con la computacion y la
+          electronica, mas precisamente con la programacion. A lo largo de los
+          años he aprendido desde lo basico como por ejemplo saber utilizar
+          word, excel y powerpoint, editores de imagenes, video hasta la
+          programacion de sitios webs, como optimizarlos para tener trafico
+          organico, que se pueda visualizar de forma correcta en diversos
+          dispositivos electronicos, todo con el proposito de que el sitio web
+          sea lo mas agradable y fluido posible al usuario final.
+        </p>
+        <div class="btns">
+          <button>
+            <a href="Kevin_castro_CV.pdf" download="Kevin_castro_CV" target="_blank"
+              >Descargar CV</a
+            >
+          </button>
+          <button>
+            <a
+              href="https://linkedin.com/in/kevin-castro-b12357214"
+              target="_blank"
+              >Contactame</a
+            >
+          </button>
         </div>
-      </section>
-      <br /><br /><br />
-     <!--aca empieza el footer-->
-     <footer class="pie_de_pagina" id="footer">
+      </div>
+    </section>
+    <br /><br /><br />
+    <!--aca empieza el footer-->
+    <footer class="pie_de_pagina" id="footer">
       <div class="copy">@copywrite 2023 KNC</div>
       <div class="social">
-        <a href="https://github.com/KNC96" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.youtube.com/channel/UCx1w6vEbfo_yyU9kwDBBuMg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-        <a href="https://linkedin.com/in/kevin-castro-b12357214" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/KNC96" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          href="https://www.youtube.com/channel/UCx1w6vEbfo_yyU9kwDBBuMg"
+          target="_blank"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a href="https://linkedin.com/in/kevin-castro-b12357214" target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
       </div>
-     </footer>
-     <script src="datos.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-      <script>
-        var typed = new Typed(".auto", {
-          strings: ["Transcriptor?", "Web Developer?", "Diseñador UI/UX?"],
-          typeSpeed: 60,
-          backSpeed: 70,
-          loop: true,
-        });
-      </script>
-      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</body>
+    </footer>
+    <script src="app.js"></script>
+    <script src="datos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typed = new Typed(".auto", {
+        strings: ["Transcriptor?", "Web Developer?", "Diseñador UI/UX?"],
+        typeSpeed: 60,
+        backSpeed: 70,
+        loop: true,
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </body>
 </html>
