@@ -1,12 +1,10 @@
-@font-face {
-    font-family: 'MPonderosa';
-    src: url('./MPonderosa.ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;800&family=Roboto:wght@700&display=swap');
+
 *{
-    padding: 0;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'M PLUS Rounded 1c';
 }
 body{
     background-color: #1E1E1E;
@@ -28,114 +26,67 @@ body{
     background: #474747;
     max-width: 20px;
 }
-/*aca modifico el header*/
-.navegacion{
+/* seccion header */
+.inicio{
+    padding: 0 20px;
+}
+.inicio .contenido{
+    max-width: 1100px;
+    margin: auto;
+    color: #fff;
+}
+.inicio header{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    padding: 30px 0px;
+    align-items: center;
 }
-.vacio h2{
-    font-size: 50px;
-    font-family: 'MPonderosa', sans-serif;
+.inicio .logo{
+    display: flex;
+    align-items: center;
     color: #FFDE59;
+    font-size: 25px;
 }
-.vacio{
-    margin-right: 150px;
-    margin-top: 8px;
-}
-#arriba{
-    padding-top: 40px;
-}
-header nav ul{
-    float: right;
+.inicio .logo i{
+    display: inline-block;
     margin-right: 20px;
 }
-nav ul li a{
+#inicio header nav a{
+    color: #fff;
     text-decoration: none;
-    font-size: 20px;
-    padding: 10px 25px;
-    font-weight:100;
-    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
 }
-nav ul li a:hover{
+#inicio header nav a:hover{
+    border-bottom: 2px solid #FFDE59;
+}
+#inicio header nav span{
+    font-size: 5rem;
+}
+.inicio .redes a{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    margin: 0 10px;
+}
+.inicio .redes a:hover{
     color: #FFDE59;
 }
-nav ul li{
-    list-style: none;
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
+#icono-nav{
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    transition: .3s;
+    cursor: pointer;
+    display: none;
 }
-/*aca modifico como se veria en celular el header*/
-@media (max-width: 700px){
-    .vacio{
-        width: 100%;
-        height: 80px;
-        margin: 0;
-        background: #1E1E1E;
-        position: fixed;
-    }
-    .vacio h2{
-        font-size: 50px;
-        position: absolute;
-        top: 10%;
-        left: 40%;
-        font-family: 'MPonderosa', sans-serif;
-        color: #FFDE59;
-    }
-    #arriba{
-        padding-top: 80px;
-    }
+#icono-nav:hover{
+    background-color: #3e3e3e;
 }
-/*aca modifico como se veria el header en tablet*/
-@media (max-width: 900px){
-    .vacio{
-        width: 100%;
-        height: 80px;
-        margin: 0;
-        background: #1E1E1E;
-        position: fixed;
-    }
-    .vacio h2{
-        font-size: 50px;
-        position: absolute;
-        top: 10%;
-        left: 40%;
-        font-family: 'MPonderosa', sans-serif;
-        color: #FFDE59;
-    }
-    #arriba{
-        padding-top: 80px;
-    }
-    .checkbtn{
-        display: block;
-        float: left;
-        position: fixed;
-        z-index: 20;
-    }
-    header{
-        z-index: 19;
-    }
-    ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #1e1e1e;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-    }
-    nav ul li{
-        display: block;
-    }
-    nav ul li a{
-        font-size: 30px;
-    }
-    #check:checked ~ ul{
-        left: 0;
-    }
-}
-
 /*aca configuro como se ven las letras animadas*/
 .main-one span{
     font-weight: 600;
@@ -145,9 +96,10 @@ nav ul li{
 .letras-animadas{
     height: 150px;
 }
-@media (max-width: 700px){
+@media (max-width: 850px){
     .letras-animadas{
-        height: 10px;
+        height: 20px;
+        margin: 20px;
     }
 }
 /*otros elementos*/
@@ -550,5 +502,37 @@ footer .social i{
 @media (max-width: 700px){
     .pie_de_pagina{
         margin-top: 40px;
+    }
+}
+/* seccion responsive */
+@media screen and (max-width:850px){
+    .redes{
+        display: none;
+    }
+    #nav{
+        display: none;
+    }
+    #nav.responsive{
+        background-color: rgba( 0, 0, 0, .9);
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 99;
+    }
+    #nav.responsive a{
+        font-size: 30px;
+    }
+    #icono-nav{
+        display: block;
+    }
+    .inicio{
+        height: auto;
     }
 }
